@@ -1,0 +1,124 @@
+body {
+  background-color: #212529;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: space-between;
+}
+
+.budget-container{
+  margin-top: 50px !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* More flexible */
+  gap: 20px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.card{
+  position: relative;
+  color: black;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 15px; /* More balanced spacing */
+}
+
+.section-btn{
+  position: absolute;
+  margin-bottom: 10px;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.remove, .addlabel{
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+}
+.remove:hover, .addlabel:hover, .delete-btn:hover, .edit-btn:hover{
+  opacity: 0.8;
+}
+.remove, .delete-btn{
+  background-color: #e74c3c;
+}
+.addlabel{
+  background-color: #2ecc71;
+}
+.edit-btn{
+  background-color: #ffcc00;
+}
+
+.delete-btn, .edit-btn{
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+.salary-input{
+  margin-bottom: 50px;
+}
+
+table{
+  width: 100%;
+}
+
+.add-section{
+  border: none;
+  margin-top: 10px;
+  border-radius: 15px;
+  background-color: #2ecc71;
+  width: 150px;
+  height: 50px;
+  color: white;
+}
+
+#save-item, #save-section{
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #2ecc71;
+  width: 80px;
+  height: 30px;
+  padding: auto;
+  margin: auto;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .budget-container {
+    grid-template-columns: 1fr; /* Stack all cards vertically */
+    gap: 15px;
+  }
+
+  .card {
+    padding: 10px;
+    width: 300px;
+  }
+
+  .section-btn {
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}

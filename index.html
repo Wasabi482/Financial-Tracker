@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Financial Tracker</title>
+</head>
+<body>
+    <h1>Financial Tracker</h1>
+    <h2>Salary</h2>
+    <input type="number" id="salary-input">
+    <div class="budget-container">
+      <div class="card" id="savings-card">
+        <h3>Savings</h3>
+        <p id="savings-display">Savings: 0</p>
+      </div>
+    </div>
+
+    <div id="addItem" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color:rgba(0,0,0,0.5); color: black;">
+      <div style="background: white; margin: 10% auto; padding: 20px; width: 300px; position: relative; color: black;">
+        <button class="cancel" style="z-index: 1;">X</button>
+        <h3>Add Item</h3>
+        <input type="text" id="item-name" placeholder="Item name" required><br><br>
+        <input type="number" id="item-amount" placeholder="Amount" required><br><br>
+        <button id="save-item">Save</button>
+      </div>
+    </div>
+
+    <div id="addSectionModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color:rgba(0,0,0,0.5)">
+      <div style="background: white; margin: 10% auto; padding: 20px; width: 300px; position: relative; color: black;">
+        <button class="cancel" style="z-index: 2;">X</button>
+        <h3>Add New Section</h3>
+        <input type="text" id="section-name" placeholder="Enter Section Name" required>
+        <button id="save-section">Save</button>
+      </div>
+    </div>
+    
+    <button id="addSection" class="add-section">Add Section</button>
+    <script src="data/sections.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
